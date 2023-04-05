@@ -1,6 +1,6 @@
 FROM tomcat:latest
 
-LABEL maintainer="Kempe Gowda"
+LABEL maintainer="Ajay"
 
 ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
 
