@@ -1,1 +1,21 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: adl-staging
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: 664865334263.dkr.ecr.ap-southeast-1.amazonaws.com/adl-lmsx:latest
+        ports:
+        - containerPort: 80
