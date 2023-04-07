@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat 
 
 LABEL maintainer="Ajay"
 
