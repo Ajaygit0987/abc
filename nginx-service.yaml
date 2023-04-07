@@ -1,16 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
-  namespace: adl-staging
-  labels:
-    app: nginx
+  name: tomcat-service
 spec:
-  ports:
-  - name: http
-    port: 80
-    protocol: TCP
-    targetPort: 80
   selector:
-    app: nginx
+    app: tomcat-app
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
   type: LoadBalancer
